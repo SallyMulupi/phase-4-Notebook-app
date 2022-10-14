@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import Main from "./components/main";
+import Sidebar from "./components/sidebar";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+    const [notes, setNotes] = useState(
+        localStorage.notes ? JSON.parse(localStorage.notes) : []
+    );
+    const [activeNote, setActiveNote] = useState(false);
+    useEffect(() => {
+        localStorage.setItem("notes", JSON.stringify(notes));
+    }, [notes]);
+    const onAddNote = () => {
+            const newNote = {
+                // id: uuid(),
+                title: "Untitled Note",
+                body: "",
+                lastModified: Date.now(),
+            };
