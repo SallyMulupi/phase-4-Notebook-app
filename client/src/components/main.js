@@ -19,3 +19,21 @@ const Main = ({ activeNote, onUpdateNote }) => {
               onChange={(e) => onEditField("title", e.target.value)}
               autoFocus
             />
+             <textarea
+          id="body"
+          placeholder="Write your note here..."
+          value={activeNote.body}
+          onChange={(e) => onEditField("body", e.target.value)}
+        />
+         </div>
+         <div className="app-main-note-preview">
+        <h1 className="preview-title">{activeNote.title}</h1>
+        <div className="markdown-preview">
+          {activeNote.body}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Main;
