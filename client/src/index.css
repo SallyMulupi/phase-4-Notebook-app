@@ -44,7 +44,7 @@ App {
 .app-sidebar-header {
     display: flex;
     justify-content: space-between;
-    padding: 25px;
+    padding: 15px;
 }
 
 .app-sidebar-header h1 {
@@ -61,7 +61,7 @@ App {
     cursor: pointer;
 }
 
-sidebar-note-title {
+.sidebar-note-title {
     display: flex;
     justify-content: space-between;
 }
@@ -109,14 +109,14 @@ sidebar-note-title {
 }
 
 app-main-note-edit {
-    padding: 25px;
+    padding: 15px;
 }
 
 .app-main-note-edit input,
 textarea {
     display: block;
     border: 1px solid #ddd;
-    margin-bottom: 20px;
+    margin-top: 15px;
     width: 100%;
     height: calc(50vh - 130px);
     padding: 10px;
@@ -126,7 +126,7 @@ textarea {
 }
 
 .app-main-note-edit input {
-    height: 50px;
+    height: 30px;
     font-size: 2rem;
 }
 
@@ -140,12 +140,19 @@ textarea {
 }
 
 .preview-title {
-    padding: 25px 25px 0 25px;
+    padding: 10px 15px 0 20px;
     margin: 0;
 }
 
 .markdown-preview {
-    padding: 0 25px 25px 25px;
+    padding: 0 20px 15px 20px;
     font-size: 1rem;
     line-height: 2rem;
+}
+
+.app-main-note-edit {
+    margin-left: 50rem;
+    margin-top: 0rem;
+    position: relative;
+    bottom: 55rem;
 }
